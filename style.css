@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 0 15px;
+}
+
+/* Titre centré avec une bonne marge */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Champ de saisie de tâche avec une bonne largeur et padding */
+#inputTarefa {
+  width: calc(100% - 110px);
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  vertical-align: middle;
+  transition: border-color 0.3s ease;
+}
+
+#inputTarefa:focus {
+  border-color: #666;
+  outline: none;
+}
+
+/* Boutons côte à côte avec espacement et effet hover */
+button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3 ease;
+  vertical-align: middle;
+}
+
+button:hover {
+  background-color: #222;
+}
+
+/* Liste avec espace entre les éléments */
+#listaTarefas {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+/* Chaque tâche comme conteneur flex pour aligner texte et boutons */
+#listaTarefas li {
+  background-color: white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Le texte de la tâche occupe l'espace restant */
+.texto-tarefa {
+  flex-grow: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Boutons à l'intérieur du li ont une marge */
+#listaTarefas li button {
+  margin-left: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+/* Champ d'édition avec bonne taille et bordure douce */
+.input-edicao {
+  flex-grow: 1;
+  font-size: 16px;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style pour les tâches marquées (fait) */
+.feito .texto-tarefa {
+  text-decoration: line-through;
+  color: gray;
+  cursor: pointer;
+}
